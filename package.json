@@ -1,0 +1,88 @@
+{
+	"dependencies": ["base"],
+	"autoload": {
+		"directories": ["examples"],
+		"files": [
+			{
+				"classes": ["TCPDF"],
+				"file": "tcpdf.php"
+			},
+			{
+				"classes": ["TCPDFBarcode"],
+				"file": "tcpdf_barcodes_1d.php"
+			},
+			{
+				"classes": [
+					"TCPDF2DBarcode"
+				],
+				"file": "tcpdf_barcodes_2d.php"
+			},
+			{
+				"classes": [
+					"TCPDF_IMPORT"
+				],
+				"file": "tcpdf_import.php"
+			},
+			{
+				"classes": [
+					"TCPDF_PARSER"
+				],
+				"file": "tcpdf_parser.php"
+			},
+			{
+				"classes": [
+					"TCPDF_COLORS"
+				],
+				"file": "include/tcpdf_colors.php"
+			},
+			{
+				"classes": [
+					"TCPDF_FILTERS"
+				],
+				"file": "include/tcpdf_filters.php"
+			},
+			{
+				"classes": [
+					"TCPDF_FONT_DATA"
+				],
+				"file": "include/tcpdf_font_data.php"
+			},
+			{
+				"classes": [
+					"TCPDF_FONTS"
+				],
+				"file": "include/tcpdf_fonts.php"
+			},
+			{
+				"classes": [
+					"TCPDF_IMAGES"
+				],
+				"file": "include/tcpdf_images.php"
+			},
+			{
+				"classes": [
+					"TCPDF_STATIC"
+				],
+				"file": "include/tcpdf_static.php"
+			},
+			{
+				"classes": [
+					"Datamatrix"
+				],
+				"file": "include/barcodes/datamatrix.php"
+			},
+			{
+				"classes": [
+					"PDF417"
+				],
+				"file": "include/barcodes/pdf417.php"
+			},
+			{
+				"classes": [
+					"QRcode"
+				],
+				"file": "include/barcodes/qrcode.php"
+			}
+		]
+	}
+}
