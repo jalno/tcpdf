@@ -29,9 +29,6 @@ use packages\tcpdf\TCPDF;
  * @since 2008-03-04
  */
 
-// Include the main TCPDF library (search for installation path).
-require_once('tcpdf_include.php');
-
 // extend TCPF with custom functions
 class Example_011_MYPDF extends TCPDF {
 
