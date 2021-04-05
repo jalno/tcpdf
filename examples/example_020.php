@@ -32,7 +32,7 @@ use packages\tcpdf\TCPDF;
 
 
 // extend TCPF with custom functions
-class MYPDF extends TCPDF {
+class Example_020_MYPDF extends TCPDF {
 
 	public function MultiRow($left, $right) {
 		// MultiCell($w, $h, $txt, $border=0, $align='J', $fill=0, $ln=1, $x='', $y='', $reseth=true, $stretch=0)
@@ -76,7 +76,7 @@ class Example_020 extends Process {
 
 	public function run() {
 		// create new PDF document
-		$pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+		$pdf = new Example_020_MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
 		// set document information
 		$pdf->SetCreator(PDF_CREATOR);

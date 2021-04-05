@@ -29,11 +29,8 @@ use packages\tcpdf\TCPDF;
  * @since 2008-03-04
  */
 
-// Include the main TCPDF library (search for installation path).
-require_once('tcpdf_include.php');
-
 // extend TCPF with custom functions
-class MYPDF extends TCPDF {
+class Example_011_MYPDF extends TCPDF {
 
 	// Load table data from file
 	public function LoadData($file) {
@@ -83,7 +80,7 @@ class Example_011 extends Process {
 
 	public function run() {
 		// create new PDF document
-		$pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+		$pdf = new Example_011_MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
 		// set document information
 		$pdf->SetCreator(PDF_CREATOR);
