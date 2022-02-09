@@ -4225,6 +4225,14 @@ class TCPDF {
 	 * @see SetFont(), setFontSubsetting()
 	 */
 	public function AddFont($family, $style='', $fontfile='', $subset='default') {
+		if ($family and !$fontfile) {
+			foreach ($this->FontFiles as $name => $fontArray) {
+				$fontKeys = $fontArray['fontkeys'] ?? [];
+				if (is_array($fontKeys) and in_array($family, $fontKeys) and isset($fontArray['fontdir']) and is_string($fontArray['fontdir'])) {
+					$fontfile = $fontArray['fontdir'] . $family . '.php';
+				}
+			}
+		}
 		if ($subset === 'default') {
 			$subset = $this->font_subsetting;
 		}
