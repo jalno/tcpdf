@@ -4163,6 +4163,9 @@ class TCPDF {
 	 * @since 5.9.000 (2010-09-28)
 	 */
 	public function getRawCharWidth($char) {
+		if (is_float($char)) {
+			$char = (int) $char;
+		}
 		if ($char == 173) {
 			// SHY character will not be printed
 			return (0);
@@ -7358,7 +7361,7 @@ class TCPDF {
 						$color = imagecolorat($img, $xpx, $ypx);
 						// get and correct gamma color
 						$alpha = $this->getGDgamma($img, $color);
-						imagesetpixel($imgalpha, $xpx, $ypx, $alpha);
+						imagesetpixel($imgalpha, $xpx, $ypx, (int)$alpha);
 					}
 				}
 				imagepng($imgalpha, $tempfile_alpha);
